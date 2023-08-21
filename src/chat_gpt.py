@@ -83,10 +83,10 @@ def main():
     #     userinput_obj = message_maker.make_user_message(user_input) 
     #     convo += manager.prompt(userinput_obj)
 
-    with open("output.txt", "w") as outfile:
+    with open("README.md", "w") as outfile:
         for item in convo:
-            outfile.write(f"Role: {item['role']}\n")
-            outfile.write("Content:\n")
+            outfile.write(f"### Role: {item['role']}\n")
+            outfile.write("#### Content:\n")
             outfile.write(item['content'])
             outfile.write("\n\n")  # Adds extra newlines between items for clarity
 

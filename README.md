@@ -1,9 +1,9 @@
-Role: user
-Content:
+### Role: user
+#### Content:
 give me step by step instructions for making a very tasty cheesecake
 
-Role: assistant
-Content:
+### Role: assistant
+#### Content:
 Sure! Here's a step-by-step guide to making a delicious cheesecake:
 
 Ingredients:
@@ -18,24 +18,25 @@ Ingredients:
 
 For the crust:
 1. Preheat your oven to 325°F (163°C).
-2. In a mixing bowl, combine the graham cracker crumbs and melted butter until the crumbs are evenly coated.
+2. In a mixing bowl, combine the graham cracker crumbs and melted butter until well combined.
 3. Press the mixture into the bottom of a 9-inch springform pan, making sure it's evenly distributed.
 4. Bake the crust in the preheated oven for about 10 minutes, then remove and set aside to cool.
 
 For the filling:
 1. In a large mixing bowl, beat the cream cheese until smooth and creamy.
 2. Gradually add the sugar and continue beating until well combined.
-3. Add the vanilla extract and mix until incorporated.
+3. Add the vanilla extract and mix well.
 4. Add the eggs, one at a time, beating well after each addition.
-5. Mix in the sour cream until the mixture is smooth.
-6. Gradually add
+5. Add the sour cream and flour, and mix until the batter is smooth and creamy.
 
-Role: user
-Content:
+Assembling and
+
+### Role: user
+#### Content:
 draw in asci a picture of an elephant
 
-Role: assistant
-Content:
+### Role: assistant
+#### Content:
 Sure! Here's an ASCII representation of an elephant:
 
 ```
