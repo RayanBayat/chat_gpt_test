@@ -61,24 +61,34 @@ def main():
     
 
     message_maker = Message_Maker("system", "user")
-
-    prompt = message_maker.make_message(
-        sys_message="You will be provided with statements, and your task is to convert them to standard English.",
-        user_message="She no went to the market."
-    )
-
     manager = API_Manager(host)
-    convo = manager.prompt(prompt)
+    # prompt = message_maker.make_message(
+    #     sys_message="You will be provided with statements, and your task is to convert them to standard English.",
+    #     user_message="She no went to the market."
+    # )
+    prompt = message_maker.make_user_message(
+        "give me step by step instructions for making a very tasty cheesecake"
+    )
+    
+    convo = prompt
+    convo += manager.prompt(prompt)
 
-    for i in range(5):
-        user_input = input("ask chat_gpt something: ")
-        userinput_obj = message_maker.make_user_message(user_input) 
-        convo += manager.prompt(userinput_obj)
+    prompt = message_maker.make_user_message(
+    "draw in asci a picture of an elephant"
+    )
+    convo += prompt
+    convo += manager.prompt(prompt)
+    # for i in range(5):
+    #     user_input = input("ask chat_gpt something: ")
+    #     userinput_obj = message_maker.make_user_message(user_input) 
+    #     convo += manager.prompt(userinput_obj)
 
     with open("output.txt", "w") as outfile:
-        yaml.dump(convo, outfile, default_flow_style=False)
-    pass
-
+        for item in convo:
+            outfile.write(f"Role: {item['role']}\n")
+            outfile.write("Content:\n")
+            outfile.write(item['content'])
+            outfile.write("\n\n")  # Adds extra newlines between items for clarity
 
 
 if __name__ == "__main__":
