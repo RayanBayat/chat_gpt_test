@@ -1,4 +1,4 @@
-
-
-
-python3 src/chat_gpt.py
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python3 src/server.py

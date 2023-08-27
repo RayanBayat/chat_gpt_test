@@ -7,7 +7,7 @@ import yaml
 openai.api_key = os.environ.get('CHATGPT_API_TOKEN')
 
 class API_Manager(openai.ChatCompletion):
-    def __init__(self, host):
+    def __init__(self):
         super().__init__()
         self.model = "gpt-3.5-turbo"
         self.temperature = 0
@@ -57,11 +57,9 @@ class Message_Maker():
 
 
 def main():
-    host = "https://api.openai.com/v1/chat/completions"
-    
 
     message_maker = Message_Maker("system", "user")
-    manager = API_Manager(host)
+    manager = API_Manager()
     # prompt = message_maker.make_message(
     #     sys_message="You will be provided with statements, and your task is to convert them to standard English.",
     #     user_message="She no went to the market."
