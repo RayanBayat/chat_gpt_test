@@ -1,0 +1,19 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* This is just an example font */
+    background-color: #f7f7f7; /* You can choose any color you like for the background */
+}
+
+.container {
+    max-width: 1000px; /* You can adjust this as per your design requirements */
+    width: 90%; /* Taking 90% of the viewport width */
+    margin: 20px auto; /* This will center the container */
+    padding: 20px; /* Some inner space for your content */
+    border: 3px solid #333; /* This gives a border */
+    background-color: #fff; /* White background for the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    border-radius: 10px; /* Optional: Rounds the corners */
+    overflow: auto; /* Ensures any internal floated elements don't break the layout */
+}
